@@ -64,55 +64,25 @@ export default function HeroSection() {
         </div>
       </div>
       
-      {/* Enhanced centered scroll down indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-        <a 
-          href="#welcome" 
-          className="group flex flex-col items-center text-white/80 hover:text-white transition-all duration-300 cursor-pointer"
-        >
-          <span className="text-sm mb-3 font-medium tracking-wider uppercase opacity-90 group-hover:opacity-100 transition-opacity">
-            {t.hero.scrollDown}
-          </span>
-          <div className="relative">
-            <div className="w-8 h-12 border-2 border-white/60 rounded-full flex justify-center group-hover:border-white/90 transition-colors">
-              <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce group-hover:bg-white/90 transition-colors"></div>
-            </div>
-            <ChevronDown className="h-5 w-5 mt-2 animate-bounce opacity-70 group-hover:opacity-100 transition-opacity" />
-          </div>
+      {/* Simple scroll down indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#welcome" className="text-white/80 hover:text-white transition-colors">
+          <ChevronDown className="h-8 w-8" />
         </a>
       </div>
       
-      {/* Enhanced animated waves */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 overflow-hidden">
-        {/* Multiple wave layers for depth */}
+      {/* Simple wave */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 overflow-hidden">
         <svg 
-          className="absolute bottom-0 w-full h-32 fill-white/90 dark:fill-background/90"
+          className="absolute bottom-0 w-full h-16 fill-white dark:fill-background"
           preserveAspectRatio="none"
-          viewBox="0 0 1440 120"
+          viewBox="0 0 1440 74"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* First wave layer */}
           <path 
-            d="M0,60L40,55C80,50,160,40,240,45C320,50,400,70,480,75C560,80,640,70,720,65C800,60,880,60,960,70C1040,80,1120,100,1200,100C1280,100,1360,80,1400,70L1440,60L1440,120L1400,120C1360,120,1280,120,1200,120C1120,120,1040,120,960,120C880,120,800,120,720,120C640,120,560,120,480,120C400,120,320,120,240,120C160,120,80,120,40,120L0,120Z"
-            className="animate-wave opacity-30"
-            style={{ animationDuration: '15s', animationDelay: '0s' }}
-          />
-          {/* Second wave layer */}
-          <path 
-            d="M0,80L40,75C80,70,160,60,240,65C320,70,400,90,480,95C560,100,640,90,720,85C800,80,880,80,960,90C1040,100,1120,120,1200,120C1280,120,1360,100,1400,90L1440,80L1440,120L1400,120C1360,120,1280,120,1200,120C1120,120,1040,120,960,120C880,120,800,120,720,120C640,120,560,120,480,120C400,120,320,120,240,120C160,120,80,120,40,120L0,120Z"
-            className="animate-wave opacity-60"
-            style={{ animationDuration: '12s', animationDelay: '-2s' }}
-          />
-          {/* Third wave layer */}
-          <path 
-            d="M0,100L40,95C80,90,160,80,240,85C320,90,400,110,480,115C560,120,640,110,720,105C800,100,880,100,960,110C1040,120,1120,140,1200,140C1280,140,1360,120,1400,110L1440,100L1440,120L1400,120C1360,120,1280,120,1200,120C1120,120,1040,120,960,120C880,120,800,120,720,120C640,120,560,120,480,120C400,120,320,120,240,120C160,120,80,120,40,120L0,120Z"
-            className="animate-wave opacity-90"
-            style={{ animationDuration: '18s', animationDelay: '-4s' }}
+            d="M0,37.1L40,34.5C80,32,160,27,240,29.6C320,32,400,42,480,42.9C560,44,640,35,720,32.1C800,30,880,34,960,40.8C1040,47,1120,56,1200,56.6C1280,57,1360,48,1400,43.3L1440,39.1L1440,74L1400,74C1360,74,1280,74,1200,74C1120,74,1040,74,960,74C880,74,800,74,720,74C640,74,560,74,480,74C400,74,320,74,240,74C160,74,80,74,40,74L0,74Z"
           />
         </svg>
-        
-        {/* Foam effect */}
-        <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white/20 to-transparent dark:from-background/20 animate-pulse-slow"></div>
       </div>
     </section>
   );
